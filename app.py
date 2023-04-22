@@ -3,8 +3,8 @@ import joblib
 import streamlit as st
 
 # Load the trained model and feature scaler
-model = joblib.load('C:/Users/hello/OneDrive/Desktop/ML Project/price_prediction.pkl')
-scaler = joblib.load('C:/Users/hello/OneDrive/Desktop/ML Project/melbourne_housing_scaler.pkl')
+model = joblib.load('price_prediction.pkl')
+scaler = joblib.load('melbourne_housing_scaler.pkl')
 
 # Define a function to preprocess the input data
 def preprocess_input(data):

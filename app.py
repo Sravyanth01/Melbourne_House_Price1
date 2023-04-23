@@ -4,18 +4,18 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model and feature scaler
-model = pickle.load(open('trained_srav.sav','rb'))
+model = pickle.load(open('C:/Users/91831/Downloads/Melbourne_House_Price1-main/trained_srav.sav','rb'))
 
 st.title('Melbourne Housing Price Predictor')
 
 
-Regionname = st.text_input('Region Name:')
+Regionname = st.slider('Region Name:',1,8,3)
 rooms = st.slider('Rooms', 1, 10, 3)
 distance = st.slider('Distance', 0, 50, 10)
 bathroom = st.slider('Bathroom', 1, 5, 2)
-car = st.slider('Car', 0, 4, 1)
-Type = st.selectbox('Type:',('H','t','u'))
-SellerG = st.selectbox('SellerG',('Agency','Agent'))
+car = st.slider('Car', 0, 11, 1)
+Type = st.slider('Type:',0,3,1)
+SellerG = st.slider('SellerG',0,111,25)
 Propertycount = st.slider('Propertycount:', 0, 1000, 100)
 landsize = st.slider('Landsize', 0, 1000, 500)
 building_area = st.slider('Building Area', 0, 1000, 500)
@@ -33,4 +33,3 @@ def predict():
     st.success('Recommended crop to grow is : ' + str(label) + ' :thumbsup:')
     
 trigger = st.button('Predict', on_click=predict)
-

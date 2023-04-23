@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model and feature scaler
-model = pickle.load(open('C:/Users/91831/Downloads/Melbourne_House_Price1-main/trained_srav.sav','rb'))
+model = pickle.load(open('trained_srav.sav','rb'))
 
 st.title('Melbourne Housing Price Predictor')
 

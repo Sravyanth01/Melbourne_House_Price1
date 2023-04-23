@@ -30,6 +30,6 @@ def predict():
     print(type(label))
     print(label)
 
-    st.success('Recommended crop to grow is : ' + str(label) + ' :thumbsup:')
+    st.success('Price : ' + str(label) )
     
 trigger = st.button('Predict', on_click=predict)
